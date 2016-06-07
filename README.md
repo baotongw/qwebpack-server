@@ -1,10 +1,16 @@
 # qwebpack-server
 
-This tools is customized by the package base on the webpack-dev-server with some team feature. All the features from webpack-dev-server is good here.
+This tools is customized by the package team base on the webpack-dev-server with some customize features. A lightweight http serve base o n the express and all the features from webpack-dev-server are good here.
 
-New feature
-	Support velocityjs file loaded (.vm) 
-	Support return the require file separate by document.write (fekit mode --fekit)
-	Support mock RESTApi data (--mock config.conf)
+## Rely On
+	+ Rely on package-webpack-server-toolkit
 
-For webpack-dev-server introduction see here https://github.com/webpack/webpack-dev-server
+## New feature	
+	+ Support velocityjs file loaded (.vm) 
+	+ Support return each file extract from export bundle by document.write mode (fekit mode --fekit)
+	+ Support mock RESTApi data (--mock config.conf)
+
+## Modification
+	+ Default server port: 80
+
+#### For webpack-dev-server introduction see here https://github.com/webpack/webpack-dev-server
