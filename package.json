@@ -1,6 +1,6 @@
 {
     "name": "qwebpack-server",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "author": {
         "name": "baotong.wang"
     },
@@ -41,7 +41,7 @@
     "homepage": "https://github.com/sdwangbaotong/qwebpack-server",
     "main": "lib/Server.js",
     "bin": {
-        "qwebpack-dev": "bin/webpack-dev-server.js"
+        "qwebpack-server": "bin/webpack-dev-server.js"
     },
     "files": [
         "lib/",
