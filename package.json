@@ -1,6 +1,6 @@
 {
     "name": "qwebpack-server",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "author": {
         "name": "baotong.wang"
     },
@@ -22,6 +22,17 @@
         "webpack-dev-middleware": "^1.4.0",
         "package-webpack-server-toolkit": "~0.0.x"
     },
+    "devDependencies": {
+        "css-loader": "~0.23.0",
+        "file-loader": "~0.8.4",
+        "jade": "^1.11.0",
+        "jade-loader": "~0.8.0",
+        "less": "^2.5.1",
+        "less-loader": "~2.2.0",
+        "style-loader": "~0.13.0",
+        "url-loader": "~0.5.6",
+        "webpack": "^1.12.1"
+    },
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -30,7 +41,7 @@
     "homepage": "https://github.com/sdwangbaotong/qwebpack-server",
     "main": "lib/Server.js",
     "bin": {
-        "webpack-dev-server": "bin/webpack-dev-server.js"
+        "qwebpack-dev": "bin/webpack-dev-server.js"
     },
     "files": [
         "lib/",
