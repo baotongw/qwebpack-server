@@ -173,17 +173,24 @@ if(options.inline) {
 	});
 }
 
-new Server(webpack(wpOpt), options).listen(options.port, options.host, function(err) {
+// var webpackArgs = options.fekit ? null : webpack(wpOpt);
+var webpackArgs = webpack(wpOpt);
+
+new Server(webpackArgs, options).listen(options.port, options.host, function(err) {
 	if(err) throw err;
+
 	if(options.inline)
 		console.log(protocol + "://" + options.host + ":" + options.port + "/");
 	else
 		console.log(protocol + "://" + options.host + ":" + options.port + "/qwebpack-server/");
+
 	console.log("webpack result is served from " + options.publicPath);
+
 	if(typeof options.contentBase === "object")
 		console.log("requests are proxied to " + options.contentBase.target);
 	else
 		console.log("content is served from " + options.contentBase);
+
 	if(options.historyApiFallback)
 		console.log("404s will fallback to %s", options.historyApiFallback.index || "/index.html");
 });
