@@ -6,7 +6,7 @@ var fs = require("fs");
 
 // Local version replaces global one
 try {
-	var localWebpackDevServer = require.resolve(path.join(process.cwd(), "node_modules", "webpack-dev-server", "bin", "webpack-dev-server.js"));
+	var localWebpackDevServer = require.resolve(path.join(process.cwd(), "node_modules", "qwebpack-server", "bin", "qwebpack-server.js"));
 	if(__filename !== localWebpackDevServer) {
 		return require(localWebpackDevServer);
 	}
@@ -17,7 +17,7 @@ var webpack = require("webpack");
 
 var optimist = require("optimist")
 
-	.usage("webpack-dev-server " + require("../package.json").version + "\n" +
+	.usage("qwebpack-server " + require("../package.json").version + "\n" +
 			"Usage: http://webpack.github.io/docs/webpack-dev-server.html")
 
 	.describe("port", "端口号，默认80；https：443").default("port", 80)
@@ -178,7 +178,7 @@ new Server(webpack(wpOpt), options).listen(options.port, options.host, function(
 	if(options.inline)
 		console.log(protocol + "://" + options.host + ":" + options.port + "/");
 	else
-		console.log(protocol + "://" + options.host + ":" + options.port + "/webpack-dev-server/");
+		console.log(protocol + "://" + options.host + ":" + options.port + "/qwebpack-server/");
 	console.log("webpack result is served from " + options.publicPath);
 	if(typeof options.contentBase === "object")
 		console.log("requests are proxied to " + options.contentBase.target);
